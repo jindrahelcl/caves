@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://coolvjdw0vcu0"]
+
+[ext_resource type="PackedScene" uid="uid://c27h1wxrg68p0" path="res://scenes/levels/level.tscn" id="1_4as71"]
+[ext_resource type="Script" path="res://scenes/levels/level_1.gd" id="2_ey1hd"]
+[ext_resource type="TileSet" uid="uid://bmm5d23ui042c" path="res://base_pack.tres" id="2_pffva"]
+[ext_resource type="PackedScene" uid="uid://d0wis22cen4o3" path="res://scenes/objects/door.tscn" id="3_62rhi"]
+[ext_resource type="Texture2D" uid="uid://da58ouwotoolu" path="res://assets/Platformer Art Complete Pack/Base pack/Tiles/signExit.png" id="3_ikm3t"]
+[ext_resource type="PackedScene" uid="uid://dteg3pl8btsy5" path="res://scenes/objects/switch.tscn" id="4_3kdrf"]
+[ext_resource type="Texture2D" uid="uid://bu4hi1h834yqi" path="res://assets/Platformer Art Complete Pack/Base pack/Items/cactus.png" id="4_h60p3"]
+[ext_resource type="Texture2D" uid="uid://dcgabyfr3uopm" path="res://assets/Platformer Art Complete Pack/Base pack/Items/plant.png" id="4_o4ya3"]
+
+[node name="Level1" instance=ExtResource("1_4as71")]
+script = ExtResource("2_ey1hd")
+
+[node name="SignExit" type="Sprite2D" parent="Decor" index="0"]
+position = Vector2(1071, 388)
+texture = ExtResource("3_ikm3t")
+
+[node name="Cactus" type="Sprite2D" parent="Decor" index="1"]
+position = Vector2(355, 524)
+texture = ExtResource("4_h60p3")
+
+[node name="Plant" type="Sprite2D" parent="Decor" index="2"]
+position = Vector2(967, 390)
+texture = ExtResource("4_o4ya3")
+
+[node name="TileMap" type="TileMap" parent="." index="1"]
+tile_set = ExtResource("2_pffva")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 458752, 4, 65536, 458752, 4, 131072, 458752, 4, 196608, 458752, 4, 262144, 458752, 4, 327680, 458752, 4, 393216, 458752, 4, 458752, 458752, 4, 524288, 458752, 4, 589824, 458752, 4, 1, 458752, 4, 262145, 720896, 2, 327681, 458752, 4, 393217, 458752, 4, 458753, 458752, 4, 524289, 458752, 4, 589825, 458752, 4, 2, 458752, 4, 262146, 720896, 2, 327682, 458752, 4, 393218, 458752, 4, 458754, 458752, 4, 524290, 458752, 4, 589826, 458752, 4, 3, 458752, 4, 262147, 720896, 2, 524291, 720896, 2, 589827, 458752, 4, 4, 458752, 4, 262148, 720896, 2, 524292, 720896, 2, 589828, 458752, 4, 5, 458752, 4, 262149, 720896, 2, 524293, 720896, 2, 589829, 458752, 4, 6, 458752, 4, 65542, 458752, 4, 131078, 458752, 4, 196614, 458752, 4, 262150, 458752, 4, 524294, 720896, 2, 589830, 458752, 4, 7, 458752, 4, 65543, 458752, 4, 131079, 458752, 4, 196615, 458752, 4, 262151, 458752, 4, 524295, 720896, 2, 589831, 458752, 4, 8, 458752, 4, 65544, 458752, 4, 131080, 458752, 4, 196616, 458752, 4, 262152, 458752, 4, 524296, 720896, 2, 589832, 458752, 4, 9, 458752, 4, 65545, 458752, 4, 131081, 458752, 4, 196617, 458752, 4, 262153, 458752, 4, 327689, 458752, 4, 393225, 458752, 4, 458761, 458752, 4, 524297, 458752, 4, 589833, 458752, 4, 10, 458752, 4, 65546, 458752, 4, 131082, 458752, 4, 196618, 458752, 4, 262154, 458752, 4, 327690, 458752, 4, 393226, 458752, 4, 458762, 458752, 4, 524298, 458752, 4, 589834, 458752, 4, 11, 458752, 4, 65547, 458752, 4, 131083, 458752, 4, 393227, 720896, 2, 458763, 458752, 4, 524299, 458752, 4, 589835, 458752, 4, 12, 458752, 4, 65548, 458752, 4, 131084, 458752, 4, 393228, 720896, 2, 458764, 458752, 4, 524300, 458752, 4, 589836, 458752, 4, 13, 458752, 4, 65549, 458752, 4, 131085, 458752, 4, 393229, 720896, 2, 458765, 458752, 4, 524301, 458752, 4, 589837, 458752, 4, 14, 458752, 4, 65550, 458752, 4, 131086, 458752, 4, 393230, 720896, 2, 458766, 458752, 4, 524302, 458752, 4, 589838, 458752, 4, 15, 458752, 4, 65551, 458752, 4, 131087, 458752, 4, 393231, 720896, 2, 458767, 458752, 4, 524303, 458752, 4, 589839, 458752, 4, 16, 458752, 4, 65552, 458752, 4, 131088, 458752, 4, 393232, 720896, 2, 458768, 458752, 4, 524304, 458752, 4, 589840, 458752, 4, 131089, 458752, 4, 131090, 458752, 4, 131091, 458752, 4, 196627, 458752, 4, 262163, 458752, 4, 327699, 458752, 4, 393235, 458752, 4, 393234, 720896, 2, 393233, 720896, 2)
+
+[node name="Door1" parent="DoorLayout" index="0" node_paths=PackedStringArray("destination") instance=ExtResource("3_62rhi")]
+position = Vector2(240, 244)
+destination = NodePath("../Door2")
+
+[node name="Door2" parent="DoorLayout" index="1" node_paths=PackedStringArray("destination") instance=ExtResource("3_62rhi")]
+position = Vector2(285, 525)
+open = false
+destination = NodePath("../Door1")
+
+[node name="Door3" parent="DoorLayout" index="2" node_paths=PackedStringArray("destination") instance=ExtResource("3_62rhi")]
+position = Vector2(553, 525)
+open = false
+destination = NodePath("../Door4")
+
+[node name="Door4" parent="DoorLayout" index="3" node_paths=PackedStringArray("destination") instance=ExtResource("3_62rhi")]
+position = Vector2(872, 385)
+destination = NodePath("../Door3")
+
+[node name="Player" parent="." index="3"]
+position = Vector2(132, 234)
+
+[node name="Switch" parent="." index="4" instance=ExtResource("4_3kdrf")]
+position = Vector2(358, 245)
+
+[connection signal="toggle" from="Switch" to="." method="_on_switch_toggle"]

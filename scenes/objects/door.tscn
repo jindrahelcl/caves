@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://d0wis22cen4o3"]
+
+[ext_resource type="Script" path="res://scenes/objects/door.gd" id="1_l4qvj"]
+[ext_resource type="Texture2D" uid="uid://b5kid4d4stkby" path="res://assets/Platformer Art Complete Pack/Base pack/Tiles/door_closedMid.png" id="2_fqfar"]
+[ext_resource type="Texture2D" uid="uid://bs6d7tajgdp4n" path="res://assets/Platformer Art Complete Pack/Base pack/Tiles/door_closedTop.png" id="3_254w6"]
+[ext_resource type="Texture2D" uid="uid://ba3qxd8qsantl" path="res://assets/Platformer Art Complete Pack/Base pack/Tiles/door_openMid.png" id="4_ggxpw"]
+[ext_resource type="Texture2D" uid="uid://dsmdfrdkxqvts" path="res://assets/Platformer Art Complete Pack/Base pack/Tiles/door_openTop.png" id="5_13ulm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_suysf"]
+size = Vector2(70, 110)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yxo1g"]
+size = Vector2(22, 70)
+
+[node name="Door" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_l4qvj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -20)
+shape = SubResource("RectangleShape2D_suysf")
+
+[node name="Sprites" type="Node2D" parent="."]
+
+[node name="ClosedSprites" type="Node2D" parent="Sprites"]
+
+[node name="ClosedMid" type="Sprite2D" parent="Sprites/ClosedSprites"]
+texture = ExtResource("2_fqfar")
+
+[node name="ClosedTop" type="Sprite2D" parent="Sprites/ClosedSprites"]
+texture = ExtResource("3_254w6")
+offset = Vector2(0, -70)
+
+[node name="OpenSprites" type="Node2D" parent="Sprites"]
+
+[node name="OpenMid" type="Sprite2D" parent="Sprites/OpenSprites"]
+texture = ExtResource("4_ggxpw")
+
+[node name="OpenTop" type="Sprite2D" parent="Sprites/OpenSprites"]
+position = Vector2(0, -70)
+texture = ExtResource("5_13ulm")
+
+[node name="EnterZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnterZone"]
+shape = SubResource("RectangleShape2D_yxo1g")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="body_entered" from="EnterZone" to="." method="_on_enter_zone_body_entered"]
+[connection signal="body_exited" from="EnterZone" to="." method="_on_enter_zone_body_exited"]

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c27h1wxrg68p0"]
+
+[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_033pt"]
+[ext_resource type="PackedScene" uid="uid://b7uk0ra701ihx" path="res://scenes/player/player.tscn" id="1_x1cw8"]
+
+[node name="Level" type="Node2D"]
+position = Vector2(0, -1)
+script = ExtResource("1_033pt")
+
+[node name="Decor" type="Node2D" parent="."]
+
+[node name="DoorLayout" type="Node2D" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("1_x1cw8")]
+collision_mask = 7
+
+[connection signal="perform_action" from="Player" to="." method="_on_player_perform_action"]

@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://kv4iv5y4u1cr"]
+
+[ext_resource type="Texture2D" uid="uid://dmsg23ofudfyv" path="res://assets/Platformer Art Complete Pack/Base pack/Items/buttonRed_pressed.png" id="1_454ms"]
+[ext_resource type="Script" path="res://scenes/objects/pressure_plate.gd" id="1_kqd22"]
+[ext_resource type="Texture2D" uid="uid://dwl0i220s0cva" path="res://assets/Platformer Art Complete Pack/Base pack/Items/buttonRed.png" id="2_ofjq1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pffjf"]
+size = Vector2(18, 42)
+
+[node name="PressurePlate" type="Area2D"]
+collision_layer = 2
+monitorable = false
+script = ExtResource("1_kqd22")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 13)
+shape = SubResource("RectangleShape2D_pffjf")
+
+[node name="PlatePressed" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+texture = ExtResource("1_454ms")
+
+[node name="PlateNotPressed" type="Sprite2D" parent="."]
+texture = ExtResource("2_ofjq1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
