@@ -1,0 +1,79 @@
+[gd_scene load_steps=12 format=3 uid="uid://bxx6el3yyovhn"]
+
+[ext_resource type="PackedScene" uid="uid://c27h1wxrg68p0" path="res://scenes/levels/level.tscn" id="1_1gfrb"]
+[ext_resource type="Texture2D" uid="uid://cmr33y8rrhxw1" path="res://assets/Platformer Art Complete Pack/Mushroom expansion/Backgrounds/bg_grasslands.png" id="2_rtoxh"]
+[ext_resource type="Texture2D" uid="uid://euv1l5ba0ps2" path="res://assets/Platformer Art Complete Pack/Base pack/Items/plantPurple.png" id="3_fe8ph"]
+[ext_resource type="TileSet" uid="uid://bmm5d23ui042c" path="res://base_pack.tres" id="3_wdvad"]
+[ext_resource type="Texture2D" uid="uid://cwb0rnof2l2xe" path="res://assets/Platformer Art Complete Pack/Base pack/Items/rock.png" id="4_awywq"]
+[ext_resource type="PackedScene" uid="uid://d0wis22cen4o3" path="res://scenes/objects/door.tscn" id="5_ox0re"]
+[ext_resource type="Texture2D" uid="uid://dcgabyfr3uopm" path="res://assets/Platformer Art Complete Pack/Base pack/Items/plant.png" id="5_sqwnu"]
+[ext_resource type="Texture2D" uid="uid://dkcp5tu7yrkig" path="res://assets/Platformer Art Complete Pack/Base pack/Items/mushroomBrown.png" id="6_bqoyx"]
+[ext_resource type="Texture2D" uid="uid://djxx2pgx3yjm" path="res://assets/Platformer Art Complete Pack/Base pack/Items/cloud2.png" id="9_3qrqr"]
+[ext_resource type="Texture2D" uid="uid://bju3468r5rpv8" path="res://assets/Platformer Art Complete Pack/Base pack/Items/cloud1.png" id="10_ppw1v"]
+[ext_resource type="Texture2D" uid="uid://be0scv6g4wx0m" path="res://assets/Platformer Art Complete Pack/Base pack/Items/cloud3.png" id="11_bv0af"]
+
+[node name="Level0" instance=ExtResource("1_1gfrb")]
+
+[node name="Background" type="Sprite2D" parent="." index="0"]
+position = Vector2(615, 299)
+texture = ExtResource("2_rtoxh")
+region_enabled = true
+region_rect = Rect2(0, -100, 1280, 720)
+metadata/_edit_lock_ = true
+
+[node name="PlantPurple" type="Sprite2D" parent="Decor" index="0"]
+position = Vector2(734, 391)
+texture = ExtResource("3_fe8ph")
+
+[node name="Rock" type="Sprite2D" parent="Decor" index="1"]
+position = Vector2(877, 385)
+texture = ExtResource("4_awywq")
+
+[node name="Rock2" type="Sprite2D" parent="Decor" index="2"]
+position = Vector2(665, 455)
+texture = ExtResource("4_awywq")
+
+[node name="Cloud2" type="Sprite2D" parent="Decor" index="3"]
+position = Vector2(221, 149)
+texture = ExtResource("9_3qrqr")
+
+[node name="Cloud1" type="Sprite2D" parent="Decor" index="4"]
+position = Vector2(657, 136)
+texture = ExtResource("10_ppw1v")
+
+[node name="Cloud3" type="Sprite2D" parent="Decor" index="5"]
+position = Vector2(1077, 176)
+texture = ExtResource("11_bv0af")
+
+[node name="Cloud4" type="Sprite2D" parent="Decor" index="6"]
+position = Vector2(28, 198)
+texture = ExtResource("9_3qrqr")
+
+[node name="Cloud5" type="Sprite2D" parent="Decor" index="7"]
+position = Vector2(888, 184)
+texture = ExtResource("10_ppw1v")
+
+[node name="Plant" type="Sprite2D" parent="Decor" index="8"]
+position = Vector2(268, 458)
+texture = ExtResource("5_sqwnu")
+
+[node name="MushroomBrown" type="Sprite2D" parent="Decor" index="9"]
+position = Vector2(419, 456)
+texture = ExtResource("6_bqoyx")
+
+[node name="TileMap" type="TileMap" parent="." index="2"]
+tile_set = ExtResource("3_wdvad")
+format = 2
+layer_0/tile_data = PackedInt32Array(458754, 458752, 8, 458755, 458752, 8, 458756, 458752, 8, 458757, 458752, 8, 458758, 458752, 8, 458759, 458752, 8, 458760, 458752, 8, 458761, 458752, 8, 458762, 458752, 4, 458763, 458752, 4, 458764, 458752, 4, 458765, 458752, 8, 458766, 458752, 8, 458767, 458752, 8, 458768, 458752, 8, 458753, 458752, 8, 458752, 458752, 8, 524287, 458752, 8, 524286, 524288, 12, 458750, 524288, 12, 393214, 524288, 12, 327678, 524288, 12, 458769, 458752, 8, 458770, 524288, 12, 393234, 524288, 12, 327698, 524288, 12, 262162, 524288, 12, 327691, 262144, 11, 393227, 458752, 4, 393228, 262144, 11, 393226, 262144, 11, 589823, 524288, 12, 655359, 524288, 12, 524288, 524288, 12, 589824, 524288, 12, 524289, 524288, 12, 589825, 524288, 12, 524290, 524288, 12, 589826, 524288, 12, 524291, 524288, 12, 589827, 524288, 12, 524292, 524288, 12, 589828, 524288, 12, 524293, 524288, 12, 589829, 524288, 12, 524294, 524288, 12, 589830, 524288, 12, 524295, 524288, 12, 589831, 524288, 12, 524296, 524288, 12, 589832, 458752, 4, 524297, 458752, 4, 589833, 458752, 4, 524298, 458752, 4, 589834, 458752, 4, 524299, 458752, 4, 589835, 458752, 4, 524300, 458752, 4, 589836, 458752, 4, 524301, 458752, 4, 589837, 458752, 4, 524302, 524288, 12, 589838, 458752, 4, 524303, 524288, 12, 589839, 524288, 12, 524304, 524288, 12, 589840, 524288, 12, 524305, 524288, 12, 589841, 524288, 12, 524306, 524288, 12, 589842, 524288, 12, 589822, 524288, 12, 655358, 524288, 12, 262155, 262144, 3)
+
+[node name="Door" parent="DoorLayout" index="0" instance=ExtResource("5_ox0re")]
+position = Vector2(510, 456)
+final_door = true
+
+[node name="Door2" parent="DoorLayout" index="1" instance=ExtResource("5_ox0re")]
+position = Vector2(1040, 455)
+open = false
+final_door = true
+
+[node name="Player" parent="." index="4"]
+position = Vector2(179, 441)
